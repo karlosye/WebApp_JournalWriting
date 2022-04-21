@@ -28,7 +28,6 @@ const Blog = mongoose.model("Blog", blogsSchema);
 /***********************************************/
 
 const homeStartingContent = "Hi there!! This is a small web application for writing daily journals. This web application is created by Karlos Ye, with the use of Node.js, Express.js, EJS and MongoDB.";
-const contactContent = "Contact me at 123@gmail.com";
 
 
 // Setting up all the app.routes:
@@ -51,7 +50,7 @@ app.get('/about', function (req, res) {
 });
 
 app.get('/contact', function (req, res) {
-  res.render('contact', { contactContent: contactContent })
+  res.render('contact')
 });
 
 app.get('/compose', function (req, res) {
